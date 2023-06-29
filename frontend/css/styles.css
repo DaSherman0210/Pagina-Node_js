@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+}
+
+main{
+    margin: 3rem;
+}
+
+.mainTable{
+    text-align: center;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    margin: 0;
+}
+
+.parte-izquierda {
+    background-color: #faeded;
+    width: 15%;
+    border-right: 2px solid rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+}
+  
+.datos{
+    display: flex;
+    flex-direction: column;
+}
+
+.datos img {
+    width: 150px;
+    height: 180px;
+    border-radius: 15px;
+    object-fit: cover;
+}
