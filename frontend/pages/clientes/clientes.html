@@ -32,7 +32,7 @@
                                 <a class="nav-link active" aria-current="page" href="../../index.html"><i class="bi bi-house-fill"></i> Categorias</a>
                                 <a class="nav-link active" aria-current="page" href="../clientes/clientes.html"><i class="bi bi-person"></i> Clientes</a>
                                 <a class="nav-link active" aria-current="page" href="../clientes_demo/clientes_demo.html"><i class="bi bi-file-earmark-person"></i> Clientes Demo</a>
-                                <a class="nav-link active" aria-current="page" href="../clientes_demografia.html"><i class="bi bi-file-earmark-person-fill"></i> Clientes Demografia</a>
+                                <a class="nav-link active" aria-current="page" href="../clientes_demografia/clientes_demografia.html"><i class="bi bi-file-earmark-person-fill"></i> Clientes Demografia</a>
                                 <a class="nav-link active" aria-current="page" href="../correos/correos.html"><i class="bi bi-envelope-at"></i> Correos</a>
                                 <a class="nav-link active" aria-current="page" href="../empleados/empleados.html"><i class="bi bi-person-bounding-box"></i> Empleados</a>
                                 <a class="nav-link active" aria-current="page" href="../empleados_ubicaciones/empleados_ubicaciones.html"><i class="bi bi-person-workspace"></i> Empleados Ubicaciones</a>
@@ -87,7 +87,7 @@
                         <th scope="col">Update</th>
                     </tr>
                 </thead>
-                <tbody class="tableBody ">
+                <tbody class="tableBody " id="clientes">
                     
                 </tbody>
             </table>
@@ -100,46 +100,50 @@
                             <button style="color: white;" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
                         </div>
                         <div class="modal-body">
-                            <form><!-- method="post" -->
+                            <form id="formInsert"><!-- method="post" -->
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Company</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <label for="id" class="form-label">ID</label>
+                                    <input type="text" class="form-control" id="id" >
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Contact</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <label for="company" class="form-label">Company</label>
+                                    <input type="text" class="form-control" id="company" >
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Title</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <label for="contact" class="form-label">Contact</label>
+                                    <input type="text" class="form-control" id="contact">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Direction</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <label for="title" class="form-label">Title</label>
+                                    <input type="text" class="form-control" id="title">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">City</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <label for="direction" class="form-label">Direction</label>
+                                    <input type="text" class="form-control" id="direction">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Regions</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <label for="city" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="city">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Potcode</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <label for="region" class="form-label">Regions</label>
+                                    <input type="text" class="form-control" id="region">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Country</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <label for="potCode" class="form-label">Potcode</label>
+                                    <input type="text" class="form-control" id="potCode">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Cellphone</label>
-                                    <input type="number" class="form-control" id="exampleInputPassword1">
+                                    <label for="country" class="form-label">Country</label>
+                                    <input type="text" class="form-control" id="country">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Fax</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <label for="cellphone" class="form-label">Cellphone</label>
+                                    <input type="number" class="form-control" id="cellphone">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="fax" class="form-label">Fax</label>
+                                    <input type="text" class="form-control" id="fax">
                                 </div>
                                 <button type="submit" class="btn btn-dark" data-bs-dismiss="modal">Submit</button>
                             </form>   
@@ -156,46 +160,47 @@
                             <button style="color: white;" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
                         </div>
                         <div class="modal-body">
-                            <form><!-- method="post" -->
+                            <form id="updateForm"><!-- method="post" -->
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Company</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <label for="company" class="form-label">Company</label>
+                                    <input type="text" class="form-control" id="companyUpdat" >
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Contact</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <label for="contact" class="form-label">Contact</label>
+                                    <input type="text" class="form-control" id="contactUpdat">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Title</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <label for="title" class="form-label">Title</label>
+                                    <input type="text" class="form-control" id="titleUpdat">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Direction</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <label for="direction" class="form-label">Direction</label>
+                                    <input type="text" class="form-control" id="directionUpdat">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">City</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <label for="city" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="cityUpdat">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Regions</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <label for="region" class="form-label">Regions</label>
+                                    <input type="text" class="form-control" id="regionUpdat">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Potcode</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <label for="potCode" class="form-label">Potcode</label>
+                                    <input type="text" class="form-control" id="potCodeUpdat">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Country</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <label for="country" class="form-label">Country</label>
+                                    <input type="text" class="form-control" id="countryUpdat">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Cellphone</label>
-                                    <input type="number" class="form-control" id="exampleInputPassword1">
+                                    <label for="cellphone" class="form-label">Cellphone</label>
+                                    <input type="number" class="form-control" id="cellphoneUpdat">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Fax</label>
-                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                    <label for="fax" class="form-label">Fax</label>
+                                    <input type="text" class="form-control" id="faxUpdat">
+                                </div>>
                                 </div>
                                 <button type="submit" class="btn btn-dark" data-bs-dismiss="modal">Submit</button>
                             </form>   
