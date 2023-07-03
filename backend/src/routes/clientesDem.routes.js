@@ -7,4 +7,4 @@ router.post("/",clientesControllers.addClienteDemo);
 router.delete("/:id",clientesControllers.deleteCli);
 router.put("/:id",clientesControllers.updateCliente);
 router.get("/:id",clientesControllers.getClienteDe);
-export default router;
+export default router; 

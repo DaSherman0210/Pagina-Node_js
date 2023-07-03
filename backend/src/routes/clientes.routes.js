@@ -8,4 +8,4 @@ router.get("/:id", clientesControllers.getCliente);
 router.delete("/:id" , clientesControllers.deleteCliente);
 router.put("/:id", clientesControllers.updateClientes);
 
-export default router;
+export default router; 

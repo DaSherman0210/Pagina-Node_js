@@ -38,7 +38,7 @@ tableCat.addEventListener('click',(e)=>{
 const borrar=(id)=>{
     const confir=confirm("desea eliminarlo");
     if(confir){
-        console.log("uno");
+        console.log("uno"); 
         delet(id);
     }
 }

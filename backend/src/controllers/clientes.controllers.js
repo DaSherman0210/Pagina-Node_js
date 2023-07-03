@@ -27,7 +27,7 @@ const getCliente = async (req,res) => {
 }
 
 const deleteCliente = async (req , res) => {
-  try {
+  try { 
     const {id} = req.params;
     const connection = await getConnection();
     const result = await connection.query('DELETE FROM clientes WHERE ClienteID = ?' , id);

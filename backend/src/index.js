@@ -5,4 +5,4 @@ const main =()=>{
     console.log(`the company's server is running on port ${app.get("port")}`);
 }
 
-main();
+main(); 

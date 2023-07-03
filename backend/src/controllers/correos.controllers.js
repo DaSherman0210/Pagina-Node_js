@@ -12,7 +12,7 @@ export const getCorreos=async ()=>{
     }
 }
 export const addCorreos= async (req,res)=>{
-    try {
+    try { 
         const {Compania,Telefono}=req.body;
         const correo={
             Compania,

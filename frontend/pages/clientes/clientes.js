@@ -145,7 +145,7 @@ function updateClie() {
   const Pais=document.querySelector('#countryUpdat').value;
   const Telefono=document.querySelector('#cellphoneUpdat').value;
   const Fax=document.querySelector('#faxUpdat').value;
-
+ 
   const cliente={
     Compania,
     Contacto,

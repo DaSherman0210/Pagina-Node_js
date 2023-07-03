@@ -12,5 +12,5 @@ const connection= mysql.createConnection({
 const getConnection=()=>{
     return connection;
 }
-
+ 
 export default getConnection;

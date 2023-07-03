@@ -12,7 +12,7 @@ export const getEmpleados=async ()=>{
     }
 }
 export const addEmpleado= async (req,res)=>{
-    try {
+    try { 
         const {Apellido,Nombre,Titulo,TituloCortesia,FechaNacimiento,FechaContratacion,Direccion,Ciudad,Regiones,CodigoPostal,Pais,Telefono,Extension,Foto,Notas,Jefe,RutaFoto}=req.body;
         const empleado={
             Apellido,

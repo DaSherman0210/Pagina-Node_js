@@ -34,7 +34,7 @@ export const insertCategorias =async (categoria)=>{
             }
         })
     } catch (error) {
-        console.log(error);
+        console.log(error); 
     }
 }
 

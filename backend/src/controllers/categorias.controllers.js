@@ -25,7 +25,7 @@ const getCategoria = async (req,res)=>{
         res.json(result);
     } catch (error) {
         res.status(500);
-        res.send(error.message);
+        res.send(error.message); 
     }
 }
 

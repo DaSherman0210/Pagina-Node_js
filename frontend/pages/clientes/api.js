@@ -44,7 +44,7 @@ export const update = async (cliente,id)=>{
     body:JSON.stringify(cliente),
     headers:{
       'Content-Type':'application/json'
-    }
+    } 
    })
   } catch (error) {
     console.log(error)

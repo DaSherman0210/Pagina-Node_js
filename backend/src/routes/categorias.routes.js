@@ -12,3 +12,4 @@ router.put("/:id", categoriaControllers.updateCategorias);
 
 export default router;
 
+ 

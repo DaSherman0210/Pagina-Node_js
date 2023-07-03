@@ -7,4 +7,4 @@ router.post("/",correosControllers.addCorreos);
 router.delete("/:id",correosControllers.deleteCorreo);
 router.put("/:id",correosControllers.updateCorreo);
 router.get("/:id",correosControllers.getCorreo);
-export default router;
+export default router; 

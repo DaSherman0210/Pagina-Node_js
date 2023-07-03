@@ -9,7 +9,7 @@ export const getCliDemogra=async ()=>{
     } catch (error) {
         res.status(500);
         res.send(error.message);
-    }
+    } 
 }
 export const addClienteDemogra= async (req,res)=>{
     try {
