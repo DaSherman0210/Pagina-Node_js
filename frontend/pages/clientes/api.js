@@ -29,14 +29,14 @@ export const  delet=async (id)=>{
   try {
     await fetch(`${urlGetCli}/${id}`,{
       method:'DELETE',
-      headres:{
+      headers:{
         'Content-Type':'application/json'
       }
     })
   } catch (error){
     console.log(error);
   }
-}|
+}
 export const update = async (cliente,id)=>{
   try {
    await fetch(`${urlGetCli}/${id}`,{

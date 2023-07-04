@@ -12,7 +12,7 @@ const getCategorias = async (req,res)=>{
         res.send(error.message);
     }
     
-}
+}   
 
 const getCategoria = async (req,res)=>{
 

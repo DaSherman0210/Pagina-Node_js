@@ -49,7 +49,6 @@ const formInsert=document.querySelector('#insertForm');
 
 formInsert.addEventListener('submit',(e)=>{
     insert(e);
-    location.reload();
 })
 
 const insert=(e)=>{
@@ -87,7 +86,6 @@ const updateForm=document.querySelector('#updateForm');
 updateForm.addEventListener('submit',(e)=>{
     e.preventDefault();
     updateCa();
-    location.reload();
 })
 
 function updateCa(){

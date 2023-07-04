@@ -33,6 +33,7 @@ export const insertCategorias =async (categoria)=>{
                 'Content-Type':'application/json'
             }
         })
+        location.reload();
     } catch (error) {
         console.log(error); 
     }
@@ -47,6 +48,7 @@ export const update=async (categoriaUp,id)=>{
                 'Content-Type':'application/json'
             }
         })
+        location.reload();
     } catch (error) {
         console.log(error)
     }
@@ -60,6 +62,7 @@ export const delet=async (id)=>{
                 'Content-Type':'application/json'
             }
         })
+        location.reload();
     } catch (error) {
         console.log(error)
     }
