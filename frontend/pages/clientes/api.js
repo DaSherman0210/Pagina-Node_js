@@ -19,7 +19,7 @@ export const inserClient=async(cliente)=>{
         "Content-Type":"application/json"
       }
     });
-    return client;
+    location.reload();
   } catch (error) {
     console.log(error);
   }
@@ -32,7 +32,8 @@ export const  delet=async (id)=>{
       headers:{
         'Content-Type':'application/json'
       }
-    })
+    });
+    location.reload();
   } catch (error){
     console.log(error);
   }
@@ -46,6 +47,7 @@ export const update = async (cliente,id)=>{
       'Content-Type':'application/json'
     } 
    })
+   location.reload();
   } catch (error) {
     console.log(error)
   }
