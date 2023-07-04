@@ -36,7 +36,7 @@ export const  delet=async (id)=>{
   } catch (error){
     console.log(error);
   }
-}
+}|
 export const update = async (cliente,id)=>{
   try {
    await fetch(`${urlGetCli}/${id}`,{

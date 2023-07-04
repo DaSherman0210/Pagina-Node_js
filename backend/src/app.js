@@ -13,6 +13,7 @@ app.set("port",5000);
 
 //middware
 app.use(express.json());
+
 //configuracion de cors
 const corsOption={
     methods: ["GET","POST","PUT","DELETE"],

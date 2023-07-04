@@ -48,7 +48,8 @@ const borrar=(id)=>{
 const formInsert=document.querySelector('#insertForm');
 
 formInsert.addEventListener('submit',(e)=>{
-    insert(e)
+    insert(e);
+    location.reload();
 })
 
 const insert=(e)=>{
@@ -74,7 +75,6 @@ const insert=(e)=>{
 const getCategoria= async(id)=>{
     const data=await categoria(id);
     const {CategoriaID,CategoriaNombre,Descripcion,Imagen}=data[0];
-    
     const CategoriaN=document.querySelector('#nameUpdate');
     CategoriaN.setAttribute('placeholder',CategoriaNombre);
     CategoriaN.setAttribute('idCa',id);
@@ -85,9 +85,9 @@ const getCategoria= async(id)=>{
 const updateForm=document.querySelector('#updateForm');
 
 updateForm.addEventListener('submit',(e)=>{
-     e.preventDefault();
-    updateCa()
-    
+    e.preventDefault();
+    updateCa();
+    location.reload();
 })
 
 function updateCa(){
@@ -111,5 +111,5 @@ function updateCa(){
 
 
 function validation(obj) {
-    return !Object.values(obj).every(element=>element != '')
+    return !Object.values(obj).every(element=>element !== '')
 }

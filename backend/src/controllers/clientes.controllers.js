@@ -3,7 +3,7 @@ import getConnection from "../db/database.js";
 const getClientes = async (req, res) => {
   try {
     const connection = await getConnection();
-    const result = await connection.query("SELECT ClienteID,Compania,Contacto FROM clientes");
+    const result = await connection.query("SELECT * FROM clientes");
     console.log(result);
     res.json(result);
   } catch (error) {
