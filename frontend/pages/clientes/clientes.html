@@ -69,28 +69,30 @@
                 
             </div>
             <!-- Tabla para insertar dinamicamente -->
-            <table class="mainTable table table-striped table-bordered">
-                <thead class="table-dark">
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Company</th>
-                        <th scope="col">Contact</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Direccion</th>
-                        <th scope="col">City</th>
-                        <th scope="col">Regions</th>
-                        <th scope="col">Postcode</th>
-                        <th scope="col">Country</th>
-                        <th scope="col">Cellphone</th>
-                        <th scope="col">Fax</th>
-                        <th scope="col">Delete</th>
-                        <th scope="col">Update</th>
-                    </tr>
-                </thead>
-                <tbody class="tableBody " id="clientes">
-                    
-                </tbody>
-            </table>
+            <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 700px; width: 1750px;">
+                <table class="mainTable table table-striped table-bordered">
+                    <thead class="table-dark" style="position: relative;">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Company</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Direccion</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Regions</th>
+                            <th scope="col">Postcode</th>
+                            <th scope="col">Country</th>
+                            <th scope="col">Cellphone</th>
+                            <th scope="col">Fax</th>
+                            <th scope="col">Delete</th>
+                            <th scope="col">Update</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tableBody " id="clientes">
+                        
+                    </tbody>
+                </table>
+            </div>
             <!-- MODAL -->
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -100,48 +102,48 @@
                             <button style="color: white;" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
                         </div>
                         <div class="modal-body">
-                            <form id="formInsert"><!-- method="post" -->
-                                <div class="mb-3">
+                            <form class="d-flex row" id="formInsert"><!-- method="post" -->
+                                <div class="mb-3 col-3">
                                     <label for="id" class="form-label">ID</label>
                                     <input type="text" class="form-control" id="id" >
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 col-9">
                                     <label for="company" class="form-label">Company</label>
                                     <input type="text" class="form-control" id="company" >
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 col-6">
                                     <label for="contact" class="form-label">Contact</label>
                                     <input type="text" class="form-control" id="contact">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 col-6">
                                     <label for="title" class="form-label">Title</label>
                                     <input type="text" class="form-control" id="title">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 col-6">
                                     <label for="direction" class="form-label">Direction</label>
                                     <input type="text" class="form-control" id="direction">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 col-6">
                                     <label for="city" class="form-label">City</label>
                                     <input type="text" class="form-control" id="city">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 col-4">
                                     <label for="region" class="form-label">Regions</label>
                                     <input type="text" class="form-control" id="region">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 col-4">
                                     <label for="potCode" class="form-label">Potcode</label>
                                     <input type="text" class="form-control" id="potCode">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 col-4">
                                     <label for="country" class="form-label">Country</label>
                                     <input type="text" class="form-control" id="country">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 col-6">
                                     <label for="cellphone" class="form-label">Cellphone</label>
                                     <input type="number" class="form-control" id="cellphone">
                                 </div>
-                                <div class="mb-3">
+                                <div class="mb-3 col-6">
                                     <label for="fax" class="form-label">Fax</label>
                                     <input type="text" class="form-control" id="fax">
                                 </div>

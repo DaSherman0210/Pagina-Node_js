@@ -69,28 +69,31 @@
                 
             </div>
             <!-- Tabla para insertar dinamicamente -->
-            <table class="mainTable table table-striped table-bordered">
-                <thead class="table-dark">
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Image</th>
-                        <th scope="col">Delete</th>
-                        <th scope="col">Update</th>
-                    </tr>
-                </thead>
-                <tbody class="tableBody " id="categorias">
-                    
-                </tbody>
-            </table>
+            <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 700px; width: 1750px;">
+                <table class="mainTable table table-striped table-bordered table-responsive">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Delete</th>
+                            <th scope="col">Update</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tableBody " id="categorias">
+                        
+                    </tbody>
+                </table>
+            </div>
+            
             <!-- MODAL INSERTAR -->
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header" style="background-color: black; color: white;">
                             <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Category</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn btn-close-white" data-bs-dismiss="modal" aria-label="Close">X</button>
                         </div>
                         <div class="modal-body">
                             <form id="insertForm" ><!-- method="post" -->

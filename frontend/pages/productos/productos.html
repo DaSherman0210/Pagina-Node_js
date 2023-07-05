@@ -75,27 +75,27 @@
             </div>
 
             <!-- Tabla para insertar dinamicamente -->
-
-            <table class="mainTable table table-striped table-bordered">
-                <thead class="table-dark">
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Producto Nombre</th>
-                        <th scope="col">Proveedor</th>
-                        <th scope="col">Categoria</th>
-                        <th scope="col">Cantidad X Unidad</th>
-                        <th scope="col">Precio Unitario</th>
-                        <th scope="col">Unidades Stock</th>
-                        <th scope="col">Unidades Pedidas</th>
-                        <th scope="col">Nivel Reorden</th>
-                        <th scope="col">Descontinuado</th>
-                    </tr>
-                </thead>
-                <tbody class="tableBody " id="productos">
-                    
-                </tbody>
-            </table>
-
+            <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 700px; width: 1750px;">
+                <table class="mainTable table table-striped table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Producto Nombre</th>
+                            <th scope="col">Proveedor</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Cantidad X Unidad</th>
+                            <th scope="col">Precio Unitario</th>
+                            <th scope="col">Unidades Stock</th>
+                            <th scope="col">Unidades Pedidas</th>
+                            <th scope="col">Nivel Reorden</th>
+                            <th scope="col">Descontinuado</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tableBody " id="productos">
+                        
+                    </tbody>
+                </table>
+            </div>
             <!-- MODAL AGREGAR -->
 
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
