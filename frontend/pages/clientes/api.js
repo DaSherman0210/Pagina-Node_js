@@ -33,7 +33,7 @@ export const  delet=async (id)=>{
         'Content-Type':'application/json'
       }
     });
-    location.reload();
+    window.location.href="./clientes.html";
   } catch (error){
     console.log(error);
   }
