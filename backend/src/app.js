@@ -16,7 +16,7 @@ app.use(express.json());
 
 //configuracion de cors
 const corsOption={
-    methods: ["GET","POST","PUT","DELETE"],
+    methods: ["GET","POST","PUT","DELETE"]
 }
 
 app.use(cors(corsOption));
