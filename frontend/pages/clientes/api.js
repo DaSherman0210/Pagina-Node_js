@@ -12,14 +12,14 @@ export const clientes = async () => {
 
 export const inserClient=async(cliente)=>{
   try {
-    const client= await fetch(urlGetCli,{
+      await fetch(urlGetCli,{
       method:"POST",
       body:JSON.stringify(cliente),
       headers:{
         "Content-Type":"application/json"
       }
     });
-    location.reload();
+    window.location.href="./clientes.html";
   } catch (error) {
     console.log(error);
   }
@@ -47,7 +47,7 @@ export const update = async (cliente,id)=>{
       'Content-Type':'application/json'
     } 
    })
-   location.reload();
+   window.location.href="./clientes.html";
   } catch (error) {
     console.log(error)
   }

@@ -1,11 +1,11 @@
 import getConnection from "../db/database.js";
 
 
-export const getEmpleados=async ()=>{
+export const getEmpleados=async (req,res)=>{
     try {
         const connection = await getConnection();
         const result = await connection.query("SELECT * FROM empleados");
-        result.json(result);
+        res.json(result);
     } catch (error) {
         res.status(500);
         res.send(error.message);

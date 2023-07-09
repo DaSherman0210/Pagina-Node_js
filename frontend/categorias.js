@@ -23,7 +23,7 @@ async function showCategorias() {
     });
 }
 
-//metodo eliminar - DELETE 
+//eventos para definir si se borra o se actualiza la categoria
 
 tableCat.addEventListener('click',(e)=>{
     if(e.target.classList.contains('delete')){
@@ -35,6 +35,7 @@ tableCat.addEventListener('click',(e)=>{
     }
 })
 
+//metodo borrar o DELETE
 const borrar=(id)=>{
     const confir=confirm("desea eliminarlo");
     if(confir){
@@ -43,7 +44,7 @@ const borrar=(id)=>{
     }
 }
 
-//metodo insertar
+//metodo insertar o INSERT
 
 const formInsert=document.querySelector('#insertForm');
 
@@ -61,6 +62,7 @@ const insert=(e)=>{
         Descripcion,
         Imagen
     }
+    console.log(categoria);
     if(validation(categoria)){
         alert("todos los datos son obligatorios")
     }else{
@@ -70,15 +72,16 @@ const insert=(e)=>{
 
 
 
-//update
+//metodo actualizar o UPDATE
 const getCategoria= async(id)=>{
     const data=await categoria(id);
     const {CategoriaID,CategoriaNombre,Descripcion,Imagen}=data[0];
-    const CategoriaN=document.querySelector('#nameUpdate');
-    CategoriaN.setAttribute('placeholder',CategoriaNombre);
-    CategoriaN.setAttribute('idCa',id);
-    const Descrip=document.querySelector('#descriptionUpdate');
-    Descrip.setAttribute('placeholder',Descripcion);
+    console.log(data);
+    console.log(CategoriaID)
+    document.querySelector('#idUpdate').value= CategoriaID;
+    document.querySelector('#nameUpdate').value= CategoriaNombre;
+    document.querySelector('#descriptionUpdate').value= Descripcion;
+    document.querySelector('#imageUpdate').value= Imagen;
     
 }
 const updateForm=document.querySelector('#updateForm');
@@ -89,16 +92,18 @@ updateForm.addEventListener('submit',(e)=>{
 })
 
 function updateCa(){
-    const CategoriaID=document.querySelector('#nameUpdate');
-    const id=parseInt(CategoriaID.getAttribute('idCa'));
+    const id=document.querySelector('#idUpdate').value;
     const CategoriaNombre=document.querySelector('#nameUpdate').value;
     const Descripcion=document.querySelector('#descriptionUpdate').value;
-    const Imagen=document.querySelector('#imageUpdate').files[0].name;
+    const Imagen=document.querySelector('#imageUpdate').value;
+
+    /* const Imagen=document.querySelector('#imageUpdate').files[0].name;*/
+
     const categoria={
         CategoriaNombre,
         Descripcion,
         Imagen
-    }
+    } 
     console.log(categoria,id);
    if(validation(categoria)){
         alert("todos los datos son obligatorios")

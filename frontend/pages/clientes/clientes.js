@@ -93,36 +93,36 @@ const getClient=async (id)=>{
   const data=await getCliente(id);
   const {Compania,Contacto,Titulo,Direccion,Ciudad,Regiones,CodigoPostal,Pais,Telefono,Fax}=data[0]
   console.log(data);
-  const CompaniaUp=document.querySelector('#companyUpdat');
-  CompaniaUp.setAttribute('placeholder',Compania);
-  CompaniaUp.setAttribute('idCli',id);
+  document.querySelector('#companyUpdat').value=Compania;
+  
 
-  const ContactoUp=document.querySelector('#contactUpdat');
-  ContactoUp.setAttribute('placeholder',Contacto);
+  document.querySelector('#contactUpdat').value=Contacto;
+  
 
-  const TituloUp=document.querySelector('#titleUpdat');
-  TituloUp.setAttribute('placeholder',Titulo);
+  document.querySelector('#titleUpdat').value=Titulo;
+  
+  document.querySelector('#directionUpdat').value=Direccion;
+  
 
-  const DireccionUp=document.querySelector('#directionUpdat');
-  DireccionUp.setAttribute('placeholder',Direccion);
+  document.querySelector('#cityUpdat').value=Ciudad;
+  
 
-  const CiudadUp=document.querySelector('#cityUpdat');
-  CiudadUp.setAttribute('placeholder',Ciudad);
+  document.querySelector('#regionUpdat').value=Regiones;
+ 
 
-  const RegionesUp=document.querySelector('#regionUpdat');
- RegionesUp.setAttribute('placeholder',Regiones);
+  document.querySelector('#potCodeUpdat').value=CodigoPostal;
+  
 
-  const CodigoPostalUp=document.querySelector('#potCodeUpdat');
-  CodigoPostalUp.setAttribute('placeholder',CodigoPostal);
+  document.querySelector('#countryUpdat').value=Pais;
+  
 
-  const PaisUp=document.querySelector('#countryUpdat');
-  PaisUp.setAttribute('placeholder',Pais);
+  document.querySelector('#cellphoneUpdat').value=Telefono;
+  
 
-  const TelefonoUp=document.querySelector('#cellphoneUpdat');
-  TelefonoUp.setAttribute('placeholder',Telefono);
+  document.querySelector('#faxUpdat').value=Fax;
 
-  const FaxUp=document.querySelector('#faxUpdat');
-  FaxUp.setAttribute('placeholder',Fax);
+  document.querySelector('#ipUpdate').value=id;
+  
 }
 
 const updateForm=document.querySelector('#updateForm');
