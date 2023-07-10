@@ -1,11 +1,11 @@
 import getConnection from "../db/database.js";
 
 
-export const getCorreos=async ()=>{
+export const getCorreos=async (req,res)=>{
     try {
         const connection = await getConnection();
         const result = await connection.query("SELECT * FROM correos");
-        result.json(result);
+        res.json(result);
     } catch (error) {
         res.status(500);
         res.send(error.message);
