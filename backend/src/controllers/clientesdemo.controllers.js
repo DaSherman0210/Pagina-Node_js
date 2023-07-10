@@ -22,8 +22,7 @@ export const addClienteDemo= async (req,res)=>{
         const result=connection.query("INSERT INTO clientesdemo SET ?",clienteDemo)
         res.json(result);
     } catch (error) {
-        res.status(500);
-        res.send(error.message);
+        res.send(error);
     }
 }
 

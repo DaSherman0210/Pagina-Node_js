@@ -60,7 +60,8 @@ const addCategorias = async (req,res)=>{
         const result= await connection.query("INSERT INTO categorias SET ?",categoria);
         res.json(result)
     } catch (error) {
-        
+        res.status(500);
+        res.send(error.message);
     }
 }
 
