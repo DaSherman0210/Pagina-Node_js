@@ -11,6 +11,17 @@ export const getCliDemo=async (req,res)=>{
         res.send(error.message);
     } 
 }
+export const getINNER= async (req,res)=>{
+    try {
+        const connection= await getConnection();
+        const result = await connection.query("SELECT * FROM clientes INNER JOIN  clientesdemo on clientes.ClienteID != clientesdemo.ClienteID");
+        res.json(result);
+
+    } catch (error) {
+        res.send(error);
+        
+    }
+}
 export const addClienteDemo= async (req,res)=>{
     try {
         const {ClienteID,TipoClienteID}=req.body;
@@ -69,6 +80,7 @@ export const methodsHTTP={
     addClienteDemo,
     deleteCli,
     updateCliente,
-    getClienteDe
+    getClienteDe,
+    getINNER
 }
 

@@ -7,8 +7,8 @@ export const getCliDemogra=async (req,res)=>{
         const result = await connection.query("SELECT * FROM clientesdemografia");
         res.json(result);
     } catch (error) {
-        res.status(500);
-        res.send(error.message);
+        res.status(400);
+        res.send(error);
     } 
 }
 export const addClienteDemogra= async (req,res)=>{

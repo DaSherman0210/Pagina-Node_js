@@ -1,3 +1,4 @@
+-- Active: 1685022154787@@127.0.0.1@3306@facturaartemis
 -- phpMyAdmin SQL Dump
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
@@ -3844,3 +3845,5 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+SELECT * FROM clientes INNER JOIN  clientesdemo on clientes.ClienteID != clientesdemo.ClienteID

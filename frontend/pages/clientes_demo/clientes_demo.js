@@ -1,5 +1,5 @@
 import {clienteDem,inserClientDem} from "./api.js";
-
+import { getClientD } from "../clientes_demografia/api.js";
 document.addEventListener('DOMContentLoaded', showClientesDemo);
 const table = document.querySelector('#clientes_demo');
 
@@ -18,6 +18,7 @@ async function showClientesDemo() {
         `
     });
 }
+
 
 const formInsert = document.querySelector("#formInsert");
 formInsert.addEventListener('submit',(e)=>{
