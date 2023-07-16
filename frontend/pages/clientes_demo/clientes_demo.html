@@ -104,11 +104,15 @@
                             <form id="formInsert"><!-- method="post" -->
                                 <div class="mb-3">
                                     <label for="id" class="form-label">ID</label>
-                                    <input type="text" class="form-control" id="id" >
+                                    <select name="id" id="ClienteID">
+
+                                    </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="tipo_cliente" class="form-label">Tipo CLiente</label>
-                                    <input type="text" class="form-control" id="tipo_cliente" >
+                                    <select name="tipo_cliente" id="tipoCliente">
+                                        
+                                    </select>
                                 </div>
                                 <button type="submit" class="btn btn-dark" data-bs-dismiss="modal">Submit</button>
                             </form>   
@@ -130,11 +134,15 @@
                             <form id="updateForm"><!-- method="post" -->
                                 <div class="mb-3">
                                     <label for="id" class="form-label">ID</label>
-                                    <input type="text" class="form-control" id="id" >
+                                    <select name="id" id="updClienteID">
+                                        
+                                    </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="tipo_cliente" class="form-label">Tipo CLiente</label>
-                                    <input type="text" class="form-control" id="tipo_cliente" >
+                                    <select name="tipo_cliente" id="updTipoCliente">
+                                        <option value=""></option>
+                                    </select>
                                 </div>
                                 <button type="submit" class="btn btn-dark" data-bs-dismiss="modal">Submit</button>
                             </form>   

@@ -3,7 +3,6 @@ import { methodsHTTP as clientesControllers } from "../controllers/clientesdemo.
 
 const router = Router();
 router.get("/", clientesControllers.getCliDemo);
-router.get("/inner",clientesControllers.getINNER);
 router.post("/",clientesControllers.addClienteDemo);
 router.delete("/:id",clientesControllers.deleteCli);
 router.put("/:id",clientesControllers.updateCliente);
